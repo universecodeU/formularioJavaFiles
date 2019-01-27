@@ -19,19 +19,14 @@ public class Alumno {
     String paterno;
     String materno;
     String correo;
-    
+    //constructor que llena los datos del alumno
     public Alumno( String nombre, String paterno, String materno, String correo){ 
         this.nombre = nombre;
         this.paterno = paterno;
         this.materno = materno;
         this.correo = correo;
     }
-    
-    public String leerAlumnos( ){
-        
-        return "";
-    }
-    
+    //método para grabar los datos del alumno en un archivo txt.
     public void guardarAlumno(Alumno nuevoAlumno)  throws IOException {
       
       String datosAlumno = "";
@@ -42,9 +37,8 @@ public class Alumno {
       writer.close();
       JOptionPane.showMessageDialog(null, "Registro exitoso");
     }
-    
-    
-    public String muestraContenido(String nombreArchivo) throws FileNotFoundException, IOException {
+    //método que retorna el contendio del archivo
+    public String leerArchivoAlumnos(String nombreArchivo) throws FileNotFoundException, IOException {
 
         String line = null;
         String alumnos = "";

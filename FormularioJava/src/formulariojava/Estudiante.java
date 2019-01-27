@@ -165,7 +165,7 @@ public class Estudiante extends javax.swing.JFrame {
         }
         
         try {
-              textAreaAlumnos.setText(nuevoAlumno.muestraContenido(nombreArchivo));
+              textAreaAlumnos.setText(nuevoAlumno.leerArchivoAlumnos(nombreArchivo));
             
         } catch (IOException ex) {
             Logger.getLogger(Estudiante.class.getName()).log(Level.SEVERE, null, ex);
